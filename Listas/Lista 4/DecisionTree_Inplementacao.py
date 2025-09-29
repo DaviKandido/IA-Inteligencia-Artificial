@@ -241,8 +241,9 @@ def construir_arvore(dataSet: pd.DataFrame, no: No, classe: str, algoritimo: Alg
 # EXEMPLO DE USO
 # ----------------------------
 if __name__ == "__main__":
+    
     # Carrega dados
-    data = pd.read_csv('./restaurante/restaurante.csv', sep=';')
+    data = pd.read_csv('./DataBases/restaurante/restaurante.csv', sep=';')
 
     # Construir árvore ID3
     arvore_id3 = ArvoreDecesion(data, classe='Conclusao', algoritimo=Algoritmos.ID3)
@@ -255,10 +256,10 @@ if __name__ == "__main__":
     print(" \n------------ Árvore ID3: ------------\n")
     arvore_id3.imprimir()
 
-    # # Imprime árvore com ID3
-    # print("\n------------ Árvore C4 .5: ------------\n")
-    # arvore_c45.imprimir()
+    # Imprime árvore com ID3
+    print("\n------------ Árvore C4 .5: ------------\n")
+    arvore_c45.imprimir()
 
-    # # Imprime árvore com ID3
-    # print(" \n------------ Árvore CART: ------------\n")
-    # arvore_cart.imprimir()
+    # Imprime árvore com ID3
+    print(" \n------------ Árvore CART: ------------\n")
+    arvore_cart.imprimir()
